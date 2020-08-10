@@ -1,6 +1,10 @@
+body {
+  padding: 40px;
+}
+
 .card {
   display: inline-block; 
-  width: 90vw !important; 
+  width: 60vw !important; 
   margin-bottom: 1rem;
 }
 

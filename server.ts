@@ -15,13 +15,13 @@ app.get("/", (req, res) => {
   })
 })
 
-app.get("/add", (req, res) => {
-  res.render('add')
+app.get("/create", (req, res) => {
+  res.render('create')
 })
 
-app.post('/add', (req, res) => {
+app.post('/create', (req, res) => {
   if (req.body.title === "" || req.body.description === "" || !req.body.title || !req.body.description) {
-    res.redirect("/add")
+    res.redirect("/create")
     return
   }
   else {
