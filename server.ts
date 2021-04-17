@@ -3,7 +3,7 @@ import { stuffs } from "./models"
 
 const app = express()
 
-app.use(express.urlencoded());
+app.use(express.urlencoded())
 
 app.use(express.static('static'))
 
@@ -51,6 +51,15 @@ app.post("/delete/:id", (req, res) => {
     if (err) res.send("Error Occured")
     else res.redirect("/")
   })
+})
+
+app.post("/etfsd", (req, res) => {
+  if (req.body.good === "true" && req.body.great === "true") {
+    res.send(`Good job! ${process.env.MSG}`)
+  }
+  else {
+    res.send("Incorrect parameters")
+  }
 })
 
 app.listen(process.env.PORT || 3000)
